@@ -25,6 +25,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
+import javafx.scene.shape.Circle;
 
 /**
  *
@@ -48,7 +49,7 @@ public class LoginView extends BorderPane {
     private final String RUTA_ESTILOS = "/com/geraldcalderon/styles/";
 
     private LoginView() {
-                 this.getStylesheets().add(RUTA_ESTILOS + "loginStyles.css");
+        this.getStylesheets().add(RUTA_ESTILOS + "loginStyles.css");
 
         this.setPadding(new Insets(20));
         this.setBorder(new Border(new BorderStroke(Color.DARKSALMON, //Color del borde
@@ -63,7 +64,6 @@ public class LoginView extends BorderPane {
                 + "#00d4ff 100%);"
                 + "-fx-background-radius: 25;"
         );
-      
 
         barraDeVentana = new HBox(20);
 
@@ -85,8 +85,19 @@ public class LoginView extends BorderPane {
         formulario.add(pwdClave, 1, 1);
         btnIniciarSesion = new Button("Iniciar sesion");
         imgLogoLogin = new ImageView(new ImageController().getImageLogin("logo"));
-        imgLogoLogin.setFitHeight(100);
-        imgLogoLogin.setFitWidth(100);
+
+// Tamaño de la imagen
+        imgLogoLogin.setFitWidth(150);
+        imgLogoLogin.setFitHeight(150);
+        imgLogoLogin.setPreserveRatio(false);
+
+// Recorte circular
+        Circle circulo = new Circle(75);
+        circulo.setCenterX(75);
+        circulo.setCenterY(75);
+
+        imgLogoLogin.setClip(circulo);
+
         imgLogoLogin.setCache(true);
         cajaVertical.setAlignment(Pos.CENTER);
         cajaVertical.getChildren().addAll(

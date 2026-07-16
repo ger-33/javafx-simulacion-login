@@ -8,22 +8,57 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
 */
 TextField.error{
     -fx-border-color:red;
-    -fx-border-with:2px;
-    
+    -fx-border-width:2px;
+
 }
 
 PasswordField.error{
     -fx-border-color:red;
-    -fx-border-with:2px;
-    
+    -fx-border-width:2px;
+
 }
 PasswordField.empty{
     -fx-border-color:red;
-    -fx-border-with:2px;
-    
+    -fx-border-width:2px;
+
 }
 
 TextField.empty{
     -fx-border-color:orange;
-    -fx-border-color:2px;
+    -fx-border-width:2px;
+}
+
+Button{
+
+    -fx-background-color:#3498db;
+    -fx-text-fill:white;
+    -fx-background-radius:20;
+
+}
+Button:hover{
+
+    -fx-background-color:#1abc9c;
+
+}
+
+Button{
+
+    -fx-background-color:#2196F3;
+    -fx-text-fill:white;
+    -fx-font-size:14px;
+    -fx-background-radius:20;
+    -fx-cursor:hand;
+
+}
+
+Button:hover{
+
+    -fx-background-color:#00BCD4;
+
+}
+
+Label{
+
+    -fx-text-fill:white;
+
 }

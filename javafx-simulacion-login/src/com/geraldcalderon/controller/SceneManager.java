@@ -8,6 +8,8 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javax.swing.JOptionPane;
+import com.geraldcalderon.model.Usuario;
+import com.geraldcalderon.view.BienvenidaView;
  
 
 /**
@@ -51,6 +53,14 @@ public class SceneManager {
             errorPadre.printStackTrace();
         }
     }
+    public void ventanaBienvenida(Usuario usuario){
+
+    BienvenidaView bienvenida =
+            BienvenidaView.getInstanciaBienvenida(usuario);
+
+    cambiarEcenaPrincipal(bienvenida,400,420);
+
+}
     public static SceneManager getInstanciaSceneManager() {
         if (instanciaSceneManager == null) {
             instanciaSceneManager = new SceneManager();
